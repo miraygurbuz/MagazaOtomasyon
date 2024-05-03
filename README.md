@@ -1,5 +1,5 @@
 # Mağaza Otomasyon
- Veritabanı Yönetim Sistemleri dersi için hazırladığımız web tabanlı proje
+ Veritabanı Yönetim Sistemleri dersi için hazırladığımız web tabanlı proje.
 - **Geliştirme ortamları:** Visual Studio Community 2022, Microsoft SQL Server Management Studio
 - **Kullanılan programlama dilleri:** C#, JavaScript
 - **Kullanılan işaretleme dilleri:** HTML, CSS
