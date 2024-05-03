@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="MagazaOtomasyon.Layout" %>
+
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+    <title>Mağaza Otomasyonu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* https://www.geeksforgeeks.org/bootstrap-navigation-bar/ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            font-family: "Helvetica", Arial, sans-serif;
+            border-radius: 0px;
+            z-index: 1000;
+            background-color: #2E8B57;
+            color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .navbar .navbar-brand,
+            .navbar .navbar-text {
+                color: #fff;
+            }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            background-color: #2980b9;
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-item a {
+            color: #c9c2c2 !important;
+        }
+
+            .navbar-nav .nav-item a:hover {
+                background-color: #1e7e34 !important;
+            }
+
+        .auto-style1 {
+            color: #FFFFFF;
+        }
+
+        .navbar-nav .glyphicon {
+            color: #fff;
+        }
+
+        .navbar-nav .dropdown-toggle .caret {
+            border-top-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="urunleriListele.aspx">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    Mağaza Otomasyonu
+                </a>
+            </div>
+            <% if (Session["kullaniciAdi"] != null)
+                { %>
+
+            <ul class="nav navbar-nav navbar-right">               
+                <li><a href="#"><span class="auto-style1">Hoş Geldiniz @<% Response.Write(Session["kullaniciAdi"]); %></span></a></li>   
+                <li><a href="siparisVer.aspx"><span class="auto-style1">Sipariş Ver</span></a></li>                
+                <li><a href="cikisYap.aspx"><span class="glyphicon glyphicon-log-out"></span><span class="auto-style1">Çıkış Yap</span></a></li>
+            </ul>
+            <% }
+                else
+                { %>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="kayitOl.aspx"><span class="glyphicon glyphicon-user"></span><span class="auto-style1">Kayıt Ol</span></a></li>
+                <li><a href="girisYap.aspx"><span class="glyphicon glyphicon-log-in"></span><span class="auto-style1">Giriş</span></a></li>
+            </ul>
+            <% } %>
+        </div>
+    </nav>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        <div class="container">
+        </div>
+    </asp:ContentPlaceHolder>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminLayout.master.cs" Inherits="MagazaOtomasyon.AdminLayout" %>
+
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+    <title>Mağaza Otomasyonu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* https://www.geeksforgeeks.org/bootstrap-navigation-bar/ */
+        .navbar {
+            font-family: "Helvetica", Arial, sans-serif;
+            border-radius: 0px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            background-color: #2980b9;
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="Admin.aspx">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    Mağaza Otomasyonu
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Listele <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="kullanicilar.aspx">Kullanıcılar</a></li>
+                        <li><a href="urunListeleAdmin.aspx">Ürünler</a></li>
+                        <li><a href="markalar.aspx">Markalar</a></li>
+                        <li><a href="kategoriler.aspx">Kategoriler</a></li>
+                        <li><a href="siparisler.aspx">Müşteri Siparişleri</a></li>
+                    </ul>
+                </li>
+                <li><a href="satisYap.aspx">Satış Yap</a></li>
+                <li><a href="gelirGider.aspx">Gelirler Giderler</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../cikisYap.aspx"><span class="glyphicon glyphicon-log-in"></span>Çıkış Yap</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        <div class="container">
+        </div>
+    </asp:ContentPlaceHolder>
+
+</body>
+
+</html>
