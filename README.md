@@ -1,13 +1,13 @@
 # Mağaza Otomasyon
  Veritabanı Yönetim Sistemleri dersi için hazırladığımız web tabanlı proje.
+ ## Kullanılan Araç ve Teknolojiler 
 - **Geliştirme ortamları:** Visual Studio Community 2022, Microsoft SQL Server Management Studio
-- **Kullanılan programlama dilleri:** C#, JavaScript
-- **Kullanılan işaretleme dilleri:** HTML, CSS
+- **Kullanılan diller:** C#, JavaScript, HTML, CSS, SQL
 - **Kullanılan frameworkler:** ASP.NET, Bootstrap
-- **Veritabanı yönetimi için:** SQL (Structured Query Language), Microsoft SQL Server Management Studio   
+- **Veritabanı yönetimi:** Microsoft SQL Server 
 
 ## Özet
-Bu projede giyim mağazalarının günlük işlemlerini daha kolay ve verimli şekilde yönetebilmesi amaçlanarak web tabanlı bir otomasyon sistemi oluşturulmuştur. Projenin veritabanı 9 tablo ve bu tablolar arasında 7 ilişki içermektedir. INDEX, TRIGGER ve VIEW kullanılarak veritabanı zenginleştirilmiştir.
+Bu projede giyim mağazalarının günlük işlemlerini daha kolay ve verimli şekilde yönetebilmesi amaçlanarak web tabanlı bir otomasyon sistemi oluşturulmuştur. Projenin veritabanı 9 tablo ve bu tablolar arasında 7 ilişki içermektedir. INDEX, TRIGGER ve VIEW kullanılarak veritabanı işlevselliği artırılmıştır.
 
 ### Admin ve Kullanıcı Arayüzleri
 
@@ -26,7 +26,7 @@ Bu projede giyim mağazalarının günlük işlemlerini daha kolay ve verimli ş
 - Giriş yapan kullanıcı, giriş yapmamış kullanıcının yaptığı tüm işlemleri yapabilir. Ek olarak sipariş verebilir. 
 
 ### Alınan Güvenlik Önlemleri
-- Kullanıcının oluşturduğu şifre veritabanında güvenlik amaçlı şifrelenerek saklanır.
+- Kullanıcının oluşturduğu şifre veritabanında güvenlik amaçlı hashlenerek saklanır.
 
 - Admin arayüzüne yalnızca admin erişebilir. Kullanıcı erişimi engellenmiştir.
 
